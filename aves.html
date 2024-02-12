@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aves - Zoo Wiki</title>
+    <link rel="stylesheet" href="sobrenos.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="data-horario"></div> <!-- Adicione este elemento para exibir a data e o horário -->
+        <script>
+            // Função para atualizar a data e o horário
+            function atualizarDataHorario() {
+                var agora = new Date();
+                var data = agora.toLocaleDateString();
+                var horas = agora.getHours();
+                var minutos = agora.getMinutes();
+                var segundos = agora.getSeconds();
+
+                horas = (horas < 10 ? "0" : "") + horas;
+                minutos = (minutos < 10 ? "0" : "") + minutos;
+                segundos = (segundos < 10 ? "0" : "") + segundos;
+
+                document.getElementById("data-horario").textContent = data + " " + horas + ":" + minutos + ":" + segundos;
+            }
+
+            atualizarDataHorario();
+
+            setInterval(atualizarDataHorario, 1000); // 1000 milissegundos = 1 segundo
+        </script>
+   
+    <nav id="menu">
+        <div class="logo">
+            <a href="index.html">
+            <img src="imagens/logozoo.webp" alt="logozoo">
+            </a>
+            <h2 class="titulo">Zoo Wiki</h2>
+            
+        </div>
+       
+        <ul>
+            <li><a href="index.html">Explorar</a>
+                <ul class="submenu">
+                    <li><a href="index.html">Pagina principal</a></li>
+                    <li><a href="sobrenos.html">Sobre nós</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Animais</a>
+                <ul class="submenu">
+                    <li><a href="anfibios.html">Anfibios</a></li>
+                    <li><a href="repteis.html">Repteis</a></li>
+                    <li><a href="mamiferos.html">Mamiferos</a></li>
+                    <li><a href="aves.html">Aves</a></li>
+                    <li><a href="peixes.html">Peixes</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Mais</a>
+                <ul class="submenu">
+                    <li><a href="lista.html">Lista de zoologicos</a></li>
+                    
+                </ul>
+            </li>
+            <li><a href="#">Contacto</a>
+                <ul class="submenu">
+                    <li><a href="contato.html">Contacte-nos</a></li>
+                    <li><a href="formulario.html">Enviar formulário</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+     </header>
+     
+
+
+     <div class="container">
+        <div class="image-container">
+          <img src="aves/falcao_peregrino.jpeg" alt="Imagem">
+        </div>
+        <div class="content-container">
+          <div><a href="https://pt.wikipedia.org/wiki/Falcão-peregrino" class="name">Falcão peregrino</a></div>
+          <div class="text">
+            <p>O que diferencia os falcões das demais aves de rapina é o fato de terem evoluído no sentido de uma especialização no voo em velocidade (em oposição ao voo planado das águias e abutres e ao voo acrobático dos gaviões), facilitado pelas asas pontiagudas e finas, favorecendo a caça em espaços abertos.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="image-container">
+          <img src="aves/aguia-real.jpg" alt="Imagem">
+        </div>
+        <div class="content-container">
+          <div><a href="https://pt.wikipedia.org/wiki/Águia-real" class="name">Águia-real</a></div>
+          <div class="text">
+            <p>A águia-real é uma espécie residente em Portugal, habitando as regiões mais inóspitas e montanhosas, com áreas de bosque e zonas rochosas, do interior do país.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container">
+        <div class="image-container">
+          <img src="aves/avestruz.jpg" alt="Imagem">
+        </div>
+        <div class="content-container">
+          <div><a href="https://pt.wikipedia.org/wiki/Avestruz-comum" class="name">Avestruz</a></div>
+          <div class="text">
+            <p>Avestruzes normalmente pesam de 90 a 130 kg, embora alguns avestruzes machos tenham sido registrados com pesos de até 155 kg. Na maturidade sexual (entre 2 e 4 anos de idade), avestruzes machos podem possuir de 1,8 m a 2,7 m de altura.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="image-container">
+          <img src="aves/corvo.png" alt="Imagem">
+        </div>
+        <div class="content-container">
+          <div><a href="https://pt.wikipedia.org/wiki/Corvo" class="name">Corvo</a></div>
+          <div class="text">
+            <p>Corvus é um gênero amplamente distribuído de aves de médio a grande porte da família Corvidae. O gênero inclui espécies comumente conhecidas como corvos. Possuem ampla distribuição geográfica nas zonas temperadas de todos os continentes, vivendo em bandos com estrutura hierárquica bem definida e formam, geralmente, casais monogâmicos. Sua alimentação é omnívora e inclui pequenos invertebrados, sementes e frutos; podem ser também necrófagos.
+          </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="image-container">
+          <img src="aves/arara.png" alt="Imagem">
+        </div>
+        <div class="content-container">
+          <div><a href="https://pt.wikipedia.org/wiki/Arara-azul-de-lear" class="name">Arara-azul-de-lear</a></div>
+          <div class="text">
+            <p>A arara-azul, também conhecida como arara-azul-grande, pertence à espécie Anodorhynchus hyacinthinus. Possui coloração predominantemente azul-cobalto, com regiões em amarelo ao redor dos olhos e na mandíbula inferior. Apresenta a pele em volta da mandíbula na forma de fita. Essa é uma ave de grande porte com cerca de 1,0 m de comprimento da cabeça à cauda e 1,20 m de envergadura, pesando, aproximadamente, 1,3 kg.</p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+     
+    
+    <footer>
+        <p>&copy; 2024 Zoo Wiki. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

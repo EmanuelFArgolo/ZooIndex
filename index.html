@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sobrenos.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <header class="background-image">
+        <div id="data-horario"></div>
+        <script>
+            // Função para atualizar a data e o horário
+            function atualizarDataHorario() {
+                var agora = new Date();
+                var data = agora.toLocaleDateString();
+                var horas = agora.getHours();
+                var minutos = agora.getMinutes();
+                var segundos = agora.getSeconds();
+    
+                horas = (horas < 10 ? "0" : "") + horas;
+                minutos = (minutos < 10 ? "0" : "") + minutos;
+                segundos = (segundos < 10 ? "0" : "") + segundos;
+    
+                document.getElementById("data-horario").textContent = data + " " + horas + ":" + minutos + ":" + segundos;
+            }
+    
+            atualizarDataHorario();
+    
+            setInterval(atualizarDataHorario, 1000); // 1000 milissegundos = 1 segundo
+        </script>
+        <nav id="menu">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagens/logozoo.webp" alt="logozoo">
+                </a>
+                <h2 class="titulo">Zoo Wiki</h2>
+            </div>
+
+            <ul>
+                <li><a href="#">Explorar</a>
+                    <ul class="submenu">
+                        <li><a href="index.html">Pagina principal</a></li>
+                        <li><a href="sobrenos.html">Sobre nós</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Animais</a>
+                    <ul class="submenu">
+                        <li><a href="anfibios.html">Anfibios</a></li>
+                        <li><a href="repteis.html">Repteis</a></li>
+                        <li><a href="mamiferos.html">Mamiferos</a></li>
+                        <li><a href="aves.html">Aves</a></li>
+                        <li><a href="peixes.html">Peixes</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Mais</a>
+                    <ul class="submenu">
+                        <li><a href="lista.html">Lista de zoologicos</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contacto</a>
+                    <ul class="submenu">
+                        <li><a href="contato.html">Contacte-nos</a></li>
+                        <li><a href="formulario.html">Enviar formulário</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+    <br><br>
+
+    <article id="artigo">
+        <h2>Zoo Wiki</h2>
+        <p>Bem vindo ao site da Zoo wiki, aqui temos informações sobre Animais e suas caracteristicas. </p>
+    </article>
+    <main>
+        <div id="slider">
+            <a href="anfibios.html"><img src="anfibios/tigresa.png" alt="Anfibios"></a>
+            <a href="repteis.html"><img src="repteis/camaleao.png" alt="Repteis"></a>
+            <a href="mamiferos.html"><img src="mamiferos/bigone.jpg" alt="Mamiferos"></a>
+            <a href="aves.html"><img src="aves/falcao_peregrino.jpeg" alt="Aves"></a>
+            <a href="peixes.html"><img src="peixes/tubarao.jpg" alt="Peixes"></a>
+            <button id="prevBtn" class="slider-btn">&#9664;</button>
+            <button id="nextBtn" class="slider-btn">&#9654;</button>
+        </div>
+    </main>
+    <br><br>
+    <div class="container">
+        <div class="image-container">
+          <img src="anfibios/anfibio.jpg" alt="Imagem">
+        </div>
+        <div class="content-container">
+          <div><a href="anfibios.html" class="name">Anfibio</a></div>
+          <div class="text">
+            <p>A palavra anfíbio, de origem grega, significa "vida dupla", porque esses animais são capazes de viver no ambiente terrestre na fase adulta, mas dependem da água para a reprodução.
+
+                Na evolução da vida no nosso planeta, os anfíbios foram os primeiros vertebrados a ocupar o ambiente terrestre, embora não efetivamente. Além de possuírem uma pele muito fina que não protege da desidratação, eles colocam ovos sem casca, que ficam ressecados se permanecerem fora da água ou de ambientes úmidos. Assim, esse grupo de animais, não é independente da água, já que pelo menos uma fase da vida, da maioria dos anfíbios, acontece na água e eles precisam dela para a reprodução.</p>
+          </div>
+        </div>
+      </div>
+
+    <div class="container">
+        <div class="image-container">
+          <img src="repteis/reptil.jpg" alt="Imagem">
+        </div>
+        <div class="content-container">
+            <div><a href="repteis.html" class="name">Reptéis</a></div>
+          <div class="text">
+            <p>A palavra “réptil” deriva do termo latino “reptare”, que significa “rastejar”. Esta é uma das características principais dos indivíduos dessa classe que, de forma geral, possuem pele sem glândulas mucosas e dotada de escamas e/ou placas ósseas.
+
+                Melhor adaptados a ambientes terrestres, os répteis possuem respiração pulmonar, ovos com casca e anexos embrionários, e excreção de ácido úrico, insolúvel em água. Além disso, grande parte de seus representantes depende de fontes externas para manter sua temperatura corporal, fenômeno este que caracteriza a ectotermia.
+                
+                A maioria das espécies possui fecundação interna, apresentando sexos separados, ausência de estágio larval, e oviparidade.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="image-container">
+          <img src="mamiferos/mamiferos.jpg" alt="Imagem">
+        </div>
+        <div class="content-container">
+            <div><a href="mamiferos.html" class="name">Mamíferos</a></div>
+          <div class="text">
+            <p>Os mamíferos constituem uma classe de animais vertebrados, que se caracterizam pela presença de glândulas mamárias nas fêmeas, que produzem leite para alimentação dos filhotes (ou crias), e a presença de pêlos ou cabelos. São animais homeotérmicos, (ou seja, de temperatura constante, também conhecidos como "animais de sangue quente"). O cérebro controla a temperatura corporal e o sistema circulatório, incluindo o coração (com quatro câmaras). Os mamíferos incluem 5.416 espécies (incluindo os seres humanos), distribuídas em aproximadamente 1.200 gêneros, 152 famílias e até 46 ordens.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="image-container">
+          <img src="aves/icon_bird.jpg" alt="Imagem">
+        </div>
+        <div class="content-container">
+            <div><a href="aves.html" class="name">Aves</a></div>
+          <div class="text">
+            <p>As aves são animais vertebrados que podem ser facilmente distinguidos pela presença de penas. A pena é uma característica exclusiva desses animais, ou seja, está presente em todas as espécies do grupo. Além disso, as aves não possuem dentes, são endotérmicas e apresentam um metabolismo elevado.
+
+                As aves podem ser encontradas em todos os continentes e, atualmente, já foram descritas cerca de 12.000 espécies. Entre as espécies desse grupo há uma grande variedade de formas, tamanhos e hábitos. Existem desde espécies com poucos centímetros de altura até espécies como o avestruz, que pode atingir mais de dois metros de altura.
+                
+                Embora a maioria das aves esteja adaptada ao voo, existem algumas exceções. O pinguim, por exemplo, não voa, mas pode nadar e mergulhar. Já o avestruz pode caminhar e correr.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="image-container">
+          <img src="peixes/icon.jpg" alt="Imagem">
+        </div>
+        <div class="content-container">
+            <div><a href="peixes.html" class="name">Peixes</a></div>
+          <div class="text">
+            <p>Os peixes são encontrados nos mais variados ambientes aquáticos e caracterizam-se por ser o grupo mais numeroso e diversificado nos vertebrados. Nesse grupo de animais, temos representantes com corpo tipicamente fusiforme; respiração, geralmente, do tipo branquial; presença de nadadeiras; e ectotermia</p>
+          </div>
+        </div>
+      </div>
+
+    
+
+
+
+    <script src="script.js"></script>
+
+    <div id="root"></div>
+
+    <footer>
+        <p>&copy; 2024 Zoo Wiki. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

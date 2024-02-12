@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamiferos- Zoo Wiki</title>
+    <link rel="stylesheet" href="sobrenos.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="data-horario"></div> <!-- Adicione este elemento para exibir a data e o horário -->
+        <script>
+            // Função para atualizar a data e o horário
+            function atualizarDataHorario() {
+                var agora = new Date();
+                var data = agora.toLocaleDateString();
+                var horas = agora.getHours();
+                var minutos = agora.getMinutes();
+                var segundos = agora.getSeconds();
+
+                horas = (horas < 10 ? "0" : "") + horas;
+                minutos = (minutos < 10 ? "0" : "") + minutos;
+                segundos = (segundos < 10 ? "0" : "") + segundos;
+
+                document.getElementById("data-horario").textContent = data + " " + horas + ":" + minutos + ":" + segundos;
+            }
+
+            atualizarDataHorario();
+
+            setInterval(atualizarDataHorario, 1000); // 1000 milissegundos = 1 segundo
+        </script>
+   
+    <nav id="menu">
+        <div class="logo">
+            <a href="index.html">
+            <img src="imagens/logozoo.webp" alt="logozoo">
+            </a>
+            <h2 class="titulo">Zoo Wiki</h2>
+            
+        </div>
+       
+        <ul>
+            <li><a href="#">Explorar</a>
+                <ul class="submenu">
+                    <li><a href="index.html">Pagina principal</a></li>
+                    <li><a href="sobrenos.html">Sobre nós</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Animais</a>
+                <ul class="submenu">
+                    <li><a href="anfibios.html">Anfibios</a></li>
+                    <li><a href="repteis.html">Repteis</a></li>
+                    <li><a href="mamiferos.html">Mamiferos</a></li>
+                    <li><a href="aves.html">Aves</a></li>
+                    <li><a href="peixes.html">Peixes</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Mais</a>
+                <ul class="submenu">
+                    <li><a href="lista.html">Lista de zoologicos</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contacto</a>
+                <ul class="submenu">
+                    <li><a href="contato.html">Contacte-nos</a></li>
+                    <li><a href="formulario.html">Enviar formulário</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+     </header>
+     
+
+     <div class="container">
+        <div class="image-container">
+          <img src="mamiferos/bigone.jpg" alt="Imagem">
+        </div>
+        <div class="content-container">
+          <div> <a href="https://pt.wikipedia.org/wiki/Gorila"class="name">Gorila</a></div>
+          <div class="text">
+            <p>Os gorilas são mamíferos primatas pertencentes ao gênero Gorilla, endêmicos das florestas tropicais do centro da África. O fato de compartilharem entre 98 a 99% do DNA com os seres humanos faz dos gorilas um dos parentes vivos mais próximos</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="image-container">
+          <img src="mamiferos/baleia-azul.png" alt="Imagem">
+        </div>
+        <div class="content-container">
+          
+          <div> <a href="https://pt.wikipedia.org/wiki/Baleia-azul" class="name">Baleia-azul</a></div>
+          <div class="text">
+            <p>A baleia-azul é o maior animal do planeta, podendo pesar até 200 toneladas e atingir aproximadamente 30 metros de comprimento. Apresentam uma cor cinzenta azulada, com a zona do ventre de uma cor mais esbranquiçada.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container">
+        <div class="image-container">
+          <img src="mamiferos/chita.jpeg" alt="Imagem">
+        </div>
+        <div class="content-container">
+          
+          <div> <a href="https://pt.wikipedia.org/wiki/Acinonyx_jubatus" class="name">Chita</a></div>
+          <div class="text">
+            <p>É o mamífero terrestre mais rápido do Mundo em curtas distâncias. Distingue-se pelo corpo esguio e pela linha negra em forma de lágrima, do canto de cada olho até à boca. O macho é maior do que a fêmea. Contrariamente à maioria dos felinos, tem garras expostas, fundamentais para a corrida em velocidade.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="image-container">
+          <img src="mamiferos/golfinho.png" alt="Imagem">
+        </div>
+        <div class="content-container">
+          
+          <div> <a href="https://pt.wikipedia.org/wiki/Golfinho" class="name">Golfinho</a></div>
+          <div class="text">
+            <p>Golfinhos são mamíferos aquáticos pertencentes à subordem dos cetáceos. Caracterizam-se por apresentar corpo hidrodinâmico e membros anteriores na forma de remos.São animais carnívoros e, a depender da espécie estudada, alimentam-se de peixes, moluscos e até mesmo de outros mamíferos</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container">
+        <div class="image-container">
+          <img src="mamiferos/elefa.jpg" alt="Imagem">
+        </div>
+        <div class="content-container">
+          <div><a href="https://pt.wikipedia.org/wiki/Elefante-africano" class="name">Elefante-africano</a></div>
+          <div class="text">
+            <p>Os elefantes-africanos são animais de coloração, normalmente, cinza e pele bastante espessa com poucos pelos. Possuem corpo bastante pesado, que se apoia sobre pernas grossas e pés largos. Possuem grandes presas na mandíbula superior, que crescem por toda a vida do animal e recebem o nome de marfim.</p>
+          </div>
+        </div>
+      </div>
+
+
+
+     
+    
+    <footer>
+        <p>&copy; 2024 Zoo Wiki. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

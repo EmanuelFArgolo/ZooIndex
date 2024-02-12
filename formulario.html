@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Mensagem</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        h1 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        #contact-form {
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        #contact-form h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        #contact-form label {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 5px;
+            display: block;
+        }
+        #contact-form input[type="text"],
+        #contact-form input[type="email"],
+        #contact-form input[type="tel"],
+        #contact-form select,
+        #contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        #contact-form input[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #contact-form input[type="submit"]:hover {
+            background-color: #555;
+        }
+        #form-success {
+            display: none;
+            color: green;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<header>
+<body>
+    <div id="data-horario"></div>
+    <script>
+        // Função para atualizar a data e o horário
+        function atualizarDataHorario() {
+            var agora = new Date();
+            var data = agora.toLocaleDateString();
+            var horas = agora.getHours();
+            var minutos = agora.getMinutes();
+            var segundos = agora.getSeconds();
+
+            horas = (horas < 10 ? "0" : "") + horas;
+            minutos = (minutos < 10 ? "0" : "") + minutos;
+            segundos = (segundos < 10 ? "0" : "") + segundos;
+
+            document.getElementById("data-horario").textContent = data + " " + horas + ":" + minutos + ":" + segundos;
+        }
+
+        atualizarDataHorario();
+
+        setInterval(atualizarDataHorario, 1000); // 1000 milissegundos = 1 segundo
+    </script>
+    <nav id="menu">
+        <div class="logo">
+            <a href="index.html">
+            <img src="imagens/logozoo.webp" alt="logozoo">
+            </a>
+            <h2 class="titulo">Zoo Wiki</h2>
+        </div>
+        
+        <ul>
+            <li><a href="#">Explorar</a>
+                <ul class="submenu">
+                    <li><a href="index.html">Pagina principal</a></li>
+                    <li><a href="sobrenos.html">Sobre nós</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Animais</a>
+                <ul class="submenu">
+                    <li><a href="anfibios.html">Anfibios</a></li>
+                    <li><a href="repteis.html">Repteis</a></li>
+                    <li><a href="mamiferos.html">Mamiferos</a></li>
+                    <li><a href="aves.html">Aves</a></li>
+                    <li><a href="peixes.html">Peixes</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Mais</a>
+                <ul class="submenu">
+                    <li><a href="lista.html">Lista de zoologicos</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contacto</a>
+                <ul class="submenu">
+                    <li><a href="contato.html">Contacte-nos</a></li>
+                    <li><a href="formulario.html">Enviar formulário</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <br><br>
+    <br><br>
+</header>
+
+    
+    <div class="container">
+        <h1>Entre em Contato: </h1>
+        <div id="root"></div>
+        <p>Fique à vontade para entrar em contato conosco. Estamos aqui para ajudar!</p>
+    </div>
+    <footer>
+        &copy; 2024 Zoo Wiki. Todos os direitos reservados.
+    </footer>
+
+    <script type="text/babel">
+        const ContactForm = () => {
+            const handleSubmit = (e) => {
+                e.preventDefault();
+                const formData = new FormData(e.target);
+                const formDataObject = {};
+                formData.forEach((value, key) => {
+                    formDataObject[key] = value;
+                });
+                const formDataJSON = JSON.stringify(formDataObject);
+                localStorage.setItem('formData', formDataJSON); // Armazena os dados no localStorage
+                console.log('Dados do formulário armazenados no localStorage:', formDataObject);
+                e.target.reset();
+                document.getElementById('form-success').style.display = 'block';
+            };
+
+            return (
+                <section id="contact-form">
+                    <h2>Formulário de Contato: </h2>
+                    <form onSubmit={handleSubmit}>
+                        <label htmlFor="nome">Nome: </label>
+                        <input type="text" id="nome" name="nome" required /><br /><br />
+
+                        <label htmlFor="motivo">Motivo de Contato:</label>
+                        <select id="motivo" name="motivo" required>
+                            <option value="">Selecione...</option>
+                            <option value="informacao">Informação</option>
+                            <option value="reclamacao">Reclamação</option>
+                        </select><br /><br />
+
+                        <label htmlFor="email">Email:</label>
+                        <input type="email" id="email" name="email" required /><br /><br />
+
+                        <label htmlFor="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" required pattern="[0-9]{8,11}" title="Informe um telefone válido (apenas números)" /><br /><br />
+
+
+                        <label htmlFor="mensagem">Mensagem:</label><br />
+                        <textarea id="mensagem" name="mensagem" rows="4" cols="50" required></textarea><br /><br />
+                        <input type="submit" value="Enviar" />
+
+                    </form>
+                    <div id="form-success">Formulário enviado com sucesso!</div>
+                </section>
+            );
+        };
+
+        ReactDOM.render(
+            <ContactForm />,
+            document.getElementById('root')
+        );
+    </script>
+</body>
+</html>

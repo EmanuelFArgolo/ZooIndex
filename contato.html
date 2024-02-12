@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos da Empresa</title>
+    <link rel="stylesheet" href="contato.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <div id="data-horario"></div> <!-- Adicione este elemento para exibir a data e o horário -->
+        <script>
+            // Função para atualizar a data e o horário
+            function atualizarDataHorario() {
+                var agora = new Date();
+                var data = agora.toLocaleDateString();
+                var horas = agora.getHours();
+                var minutos = agora.getMinutes();
+                var segundos = agora.getSeconds();
+
+                horas = (horas < 10 ? "0" : "") + horas;
+                minutos = (minutos < 10 ? "0" : "") + minutos;
+                segundos = (segundos < 10 ? "0" : "") + segundos;
+
+                document.getElementById("data-horario").textContent = data + " " + horas + ":" + minutos + ":" + segundos;
+            }
+
+            atualizarDataHorario();
+
+            setInterval(atualizarDataHorario, 1000); // 1000 milissegundos = 1 segundo
+        </script>
+         <nav id="menu">
+            <div class="logo">
+                <a href="index.html">
+                <img src="imagens/logozoo.webp" alt="logozoo">
+                </a>
+                <h2 class="titulo">Zoo Wiki</h2>
+            </div>
+        
+            <ul>
+                <li><a href="index.html">Explorar</a>
+                    <ul class="submenu">
+                        <li><a href="index.html">Pagina principal</a></li>
+                        <li><a href="sobrenos.html">Sobre nós</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Animais</a>
+                    <ul class="submenu">
+                        <li><a href="anfibios.html">Anfibios</a></li>
+                        <li><a href="repteis.html">Repteis</a></li>
+                        <li><a href="mamiferos.html">Mamiferos</a></li>
+                        <li><a href="aves.html">Aves</a></li>
+                        <li><a href="peixes.html">Peixes</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Mais</a>
+                    <ul class="submenu">
+                        <li><a href="lista.html">Lista de zoologicos</a></li>                   
+                    </ul>
+                </li>
+                <li><a href="#">Contacto</a>
+                    <ul class="submenu">
+                        <li><a href="contato.html">Contacte-nos</a></li>
+                        <li><a href="formulario.html">Enviar formulário</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <h1>Contatos da Empresa: </h1>
+        
+    </header>
+    
+    <main>
+        <div class="contato">
+            <h2>Miguel Diretor de marketing</h2>
+            <p>Email: Miguel@example.com</p>
+            <p>Telefone: (351) 985789094</p>
+        </div>
+        <div class="contato">
+            <h2>Rafael Diretor de ciências</h2>
+            <p>Email: rafael@example.com</p>
+            <p>Telefone: (351) 956421332</p>
+        </div>
+        <div class="contato">
+            <h2>Emanuel Estagiario</h2>
+            <p>Email: Emanuel@example.com</p>
+            <p>Telefone: (351) 932876543</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Zoo wiki</p>
+        
+    </footer>
+</body>
+</html>

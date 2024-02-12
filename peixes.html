@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peixes- Zoo Wiki</title>
+    <link rel="stylesheet" href="sobrenos.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="data-horario"></div> <!-- Adicione este elemento para exibir a data e o horário -->
+        <script>
+            // Função para atualizar a data e o horário
+            function atualizarDataHorario() {
+                var agora = new Date();
+                var data = agora.toLocaleDateString();
+                var horas = agora.getHours();
+                var minutos = agora.getMinutes();
+                var segundos = agora.getSeconds();
+
+                horas = (horas < 10 ? "0" : "") + horas;
+                minutos = (minutos < 10 ? "0" : "") + minutos;
+                segundos = (segundos < 10 ? "0" : "") + segundos;
+
+                document.getElementById("data-horario").textContent = data + " " + horas + ":" + minutos + ":" + segundos;
+            }
+
+            atualizarDataHorario();
+
+            setInterval(atualizarDataHorario, 1000); // 1000 milissegundos = 1 segundo
+        </script>
+   
+    <nav id="menu">
+        <div class="logo">
+            <a href="index.html">
+            <img src="imagens/logozoo.webp" alt="logozoo">
+            </a>
+            <h2 class="titulo">Zoo Wiki</h2>
+            
+        </div>
+       
+        <ul>
+            <li><a href="index.html">Explorar</a>
+                <ul class="submenu">
+                    <li><a href="index.html">Pagina principal</a></li>
+                    <li><a href="sobrenos.html">Sobre nós</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Animais</a>
+                <ul class="submenu">
+                    <li><a href="anfibios.html">Anfibios</a></li>
+                    <li><a href="repteis.html">Repteis</a></li>
+                    <li><a href="mamiferos.html">Mamiferos</a></li>
+                    <li><a href="aves.html">Aves</a></li>
+                    <li><a href="peixes.html">Peixes</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Mais</a>
+                <ul class="submenu">
+                    <li><a href="lista.html">Lista de zoologicos</a></li>
+                   
+                </ul>
+            </li>
+            <li><a href="#">Contacto</a>
+                <ul class="submenu">
+                    <li><a href="contato.html">Contacte-nos</a></li>
+                    <li><a href="formulario.html">Enviar formulário</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+     </header>
+     
+
+     <div class="container">
+        <div class="image-container">
+          <img src="peixes/tubarao.jpg" alt="Imagem">
+        </div>
+        <div class="content-container">
+          <div><a href="https://pt.wikipedia.org/wiki/Tubarão-branco" class="name">Tubarão-branco</a></div>
+          <div class="text">
+            <p>Os tubarões-brancos vivem em quase todas as águas costeiras e de mar aberto que têm temperatura da água entre 12 e 24 °C (54 e 75 °F), com maiores concentrações nos Estados Unidos (Nordeste e Califórnia), África do Sul, Japão, Oceania, Chile e o mar Mediterrâneo, incluindo o mar de Mármara e Bósforo.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="image-container">
+          <img src="peixes/tubarao baleia.png" alt="Imagem">
+        </div>
+        <div class="content-container">
+          <div><a href="https://pt.wikipedia.org/wiki/Tubarão-baleia" class="name">Tubarão-baleia</a></div>
+          <div class="text">
+            <p>O tubarão-baleia é o maior animal não cetáceo do mundo. Evidências sugerem que exibe dimorfismo sexual em relação ao tamanho, com os machos não crescendo tão grandes quanto as fêmeas. Um estudo analisou o crescimento de espécimes ao longo de 10 anos.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container">
+        <div class="image-container">
+          <img src="peixes/peixe_palhaco.png" alt="Imagem">
+        </div>
+        <div class="content-container">
+          <div><a href="https://en.wikipedia.org/wiki/Clownfish" class="name">Peixe-palhaço</a></div>
+          <div class="text">
+            <p>Na natureza, a personalidade do peixe-palhaço pode variar conforme o habitat se mostra mais ou menos propício ao peixe. Em ambientes pouco amigáveis e mais instáveis, o cardume tende a ser bastante homogêneo. Em ambientes propícios, o peixinho fica mais individualista e comportamental.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="image-container">
+          <img src="peixes/cavalo-marinho.png" alt="Imagem">
+        </div>
+        <div class="content-container">
+          <div><a href="https://pt.wikipedia.org/wiki/Cavalo-marinho" class="name">Cavalo-marinho</a></div>
+          <div class="text">
+            <p>Os cavalos-marinhos são encontrados principalmente em águas rasas tropicais e temperadas em todo o mundo, e preferem viver em áreas abrigadas, tais como leitos de algas marinhas, estuários, recifes de corais ou mangues.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="image-container">
+          <img src="peixes/peixe-balao.png" alt="Imagem">
+        </div>
+        <div class="content-container">
+          <div><a href="https://pt.wikipedia.org/wiki/Tetraodontidae" class="name">Peixe-balão</a></div>
+          <div class="text">
+            <p>Este peixe pode parecer bastante inocente e calmo, o que faz com que as pessoas não imaginem que pode ser tão venenoso e fatal.Para os humanos, este veneno é mortal, sem antídoto conhecido; no entanto, ironicamente, a carne de peixe-balão é considerada uma iguaria chamada fugu no Japão. </p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+     
+    
+    <footer>
+        <p>&copy; 2024 Zoo Wiki. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

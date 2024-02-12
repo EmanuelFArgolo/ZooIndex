@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anfibios - Zoo Wiki</title>
+    <link rel="stylesheet" href="sobrenos.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="data-horario"></div> <!-- Adicione este elemento para exibir a data e o horário -->
+        <script>
+            // Função para atualizar a data e o horário
+            function atualizarDataHorario() {
+                var agora = new Date();
+                var data = agora.toLocaleDateString();
+                var horas = agora.getHours();
+                var minutos = agora.getMinutes();
+                var segundos = agora.getSeconds();
+
+                horas = (horas < 10 ? "0" : "") + horas;
+                minutos = (minutos < 10 ? "0" : "") + minutos;
+                segundos = (segundos < 10 ? "0" : "") + segundos;
+
+                document.getElementById("data-horario").textContent = data + " " + horas + ":" + minutos + ":" + segundos;
+            }
+
+            atualizarDataHorario();
+
+            setInterval(atualizarDataHorario, 1000); // 1000 milissegundos = 1 segundo
+        </script>
+   
+    <nav id="menu">
+        <div class="logo">
+            <a href="index.html">
+            <img src="imagens/logozoo.webp" alt="logozoo">
+            </a>
+            <h2 class="titulo">Zoo Wiki</h2>
+            
+        </div>
+       
+        <ul>
+            <li><a href="index.html">Explorar</a>
+                <ul class="submenu">
+                    <li><a href="index.html">Pagina principal</a></li>
+                    <li><a href="sobrenos.html">Sobre nós</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Animais</a>
+                <ul class="submenu">
+                    <li><a href="anfibios.html">Anfibios</a></li>
+                    <li><a href="repteis.html">Repteis</a></li>
+                    <li><a href="mamiferos.html">Mamiferos</a></li>
+                    <li><a href="aves.html">Aves</a></li>
+                    <li><a href="peixes.html">Peixes</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Mais</a>
+                <ul class="submenu">
+                    <li><a href="lista.html">Lista de zoologicos</a></li>
+                    
+                </ul>
+            </li>
+            <li><a href="#">Contacto</a>
+                <ul class="submenu">
+                    <li><a href="contato.html">Contacte-nos</a></li>
+                    <li><a href="formulario.html">Enviar formulário</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+     </header>
+     
+     <div class="container">
+        <div class="image-container">
+          <img src="anfibios/tigresa.png" alt="Imagem">
+        </div>
+        <div class="content-container">
+          <div> <a href="https://pt.wikipedia.org/wiki/Ambystoma_tigrinum" class="name">Salamandra-tigre</a></div>
+          <div class="text">
+            <p>A Salamandra Tigre, também conhecida como Salamandra Gigante, é um fascinante anfíbio encontrado em várias regiões montanhosas do sul e sudeste da Europa. O nome deste animal vem dos desenhos distintos em sua pele, que se assemelham às listras de um tigre. Chama a atenção por sua aparência única e é considerada uma espécie emblemática e protegida em muitos países.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="image-container">
+          <img src="anfibios/titrao.png" alt="Imagem">
+        </div>
+        <div class="content-container">
+          <div> <a href="https://pt.wikipedia.org/wiki/Tritão-ibérico" class="name">Tritão de ventre laranja</a></div>
+          <div class="text">
+            <p>Este tritão é de tamanho pequeno, normalmente entre 6,5 e 9 cm de comprimento total. A cabeça tem contornos arredondados, ligeiramente mais larga e alta. Os olhos são pequenos, proeminentes e em posição lateral.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container">
+        <div class="image-container">
+          <img src="anfibios/curu.png" alt="Imagem">
+        </div>
+        <div class="content-container">
+          <div><a href="https://pt.wikipedia.org/wiki/Rhinella_marina" class="name">Sapo-boi</a></div>
+          <div class="text">
+            <p>O sapo-cururu é um anfíbio grande, venenoso e com verrugas nativo da América do Sul e América Central. É considerado uma das piores espécies invasoras do mundo.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="image-container">
+          <img src="anfibios/axolote.png" alt="Imagem">
+        </div>
+        <div class="content-container">
+          <div><a href="https://pt.wikipedia.org/wiki/Ambystoma_mexicanum" class="name">Axolote</a></div>
+          <div class="text">
+            <p>Os axolotes são salamandras pedomórficas, isto é, mantêm certas características larvais na fase adulta. Eles possuem brânquias externas e caudas aletas para a natação.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="image-container">
+          <img src="anfibios/ra.png" alt="Imagem">
+        </div>
+        <div class="content-container">
+          <div><a href="https://pt.wikipedia.org/wiki/Rã-arlequim" class="name">Rã-arlequim</a></div>
+          <div class="text">
+            <p>A rã-arlequim, é uma espécie de anfíbio neo-tropical, da família Bufonidae. Antigamente podia ser encontrada da Costa Rica até ao Panamá, mas actualmente encontra-se em perigo de extinção</p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+    
+    <footer>
+        <p>&copy; 2024 Zoo Wiki. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

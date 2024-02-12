@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repteis- Zoo Wiki</title>
+    <link rel="stylesheet" href="sobrenos.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="data-horario"></div> <!-- Adicione este elemento para exibir a data e o horário -->
+        <script>
+            // Função para atualizar a data e o horário
+            function atualizarDataHorario() {
+                var agora = new Date();
+                var data = agora.toLocaleDateString();
+                var horas = agora.getHours();
+                var minutos = agora.getMinutes();
+                var segundos = agora.getSeconds();
+
+                horas = (horas < 10 ? "0" : "") + horas;
+                minutos = (minutos < 10 ? "0" : "") + minutos;
+                segundos = (segundos < 10 ? "0" : "") + segundos;
+
+                document.getElementById("data-horario").textContent = data + " " + horas + ":" + minutos + ":" + segundos;
+            }
+
+            atualizarDataHorario();
+
+            setInterval(atualizarDataHorario, 1000); // 1000 milissegundos = 1 segundo
+        </script>
+   
+    <nav id="menu">
+        <div class="logo">
+            <a href="index.html">
+            <img src="imagens/logozoo.webp" alt="logozoo">
+            </a>
+            <h2 class="titulo">Zoo Wiki</h2>
+            
+        </div>
+       
+        <ul>
+            <li><a href="index.html">Explorar</a>
+                <ul class="submenu">
+                    <li><a href="index.html">Pagina principal</a></li>
+                    <li><a href="sobrenos.html">Sobre nós</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Animais</a>
+                <ul class="submenu">
+                    <li><a href="anfibios.html">Anfibios</a></li>
+                    <li><a href="repteis.html">Repteis</a></li>
+                    <li><a href="mamiferos.html">Mamiferos</a></li>
+                    <li><a href="aves.html">Aves</a></li>
+                    <li><a href="peixes.html">Peixes</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Mais</a>
+                <ul class="submenu">
+                    <li><a href="lista.html">Lista de zoologicos</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contacto</a>
+                <ul class="submenu">
+                    <li><a href="contato.html">Contacte-nos</a></li>
+                    <li><a href="formulario.html">Enviar formulário</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+     </header>
+     
+
+     <div class="container">
+        <div class="image-container">
+          <img src="repteis/camaleao.png" alt="Imagem">
+        </div>
+        <div class="content-container">
+          <div><a href="https://pt.wikipedia.org/wiki/Camaleão-pantera" class="name">Camaleão-pantera</a></div>
+          <div class="text">
+            <p>Os Camaleões Pantera, como a maioria dos camaleões, são uma espécie arborícola. Habitem as zonas florestadas tropicas da ilha de Madagáscar.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="image-container">
+          <img src="repteis/croc.png" alt="Imagem">
+        </div>
+        <div class="content-container">
+          <div><a href="https://pt.wikipedia.org/wiki/Crocodilo-de-água-salgada" class="name">Crocodilo-de-água-salgada</a></div>
+          <div class="text">
+            <p>O maior réptil hoje na face da terra é o crocodilo-de-água-salgada encontrado no norte da Austrália e ilhas do sudeste da Ásia.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container">
+        <div class="image-container">
+          <img src="repteis/tarta-couro.png" alt="Imagem">
+        </div>
+        <div class="content-container">
+          <div><a href="https://pt.wikipedia.org/wiki/Tartaruga-de-couro" class="name">Tartaruga-de-couro</a></div>
+          <div class="text">
+            <p>É a maior de todas as tartarugas marinhas;. A sua carapaça pode atingir 1,32m a 2,52m comprimento;. O seu peso pode variar entre 250 a 910 kg</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="image-container">
+          <img src="repteis/draco.png" alt="Imagem">
+        </div>
+        <div class="content-container">
+          <div><a href="https://pt.wikipedia.org/wiki/Draco_volans" class="name">Dragão-voador</a></div>
+          <div class="text">
+            <p>É uma espécie de lagarto endêmico do Sudeste da Ásia. Assim como os outros membros do gênero Draco, esta espécie é conhecida por sua capacidade de planar usando suas extensões laterais de pele semelhantes à asas chamada patágio. 
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="image-container">
+          <img src="repteis/tartaruga_pente.jpg" alt="Imagem">
+        </div>
+        <div class="content-container">
+          <div><a href="https://pt.wikipedia.org/wiki/Tartaruga-de-pente" class="name">Tartaruga-de-pente</a></div>
+          <div class="text">
+            <p>As tartarugas-de-pente ocupam uma vasta faixa do globo terrestre, sendo encontradas predominantemente em recifes tropicais dos oceanos Índico, Pacífico e Atlântico. De todas as espécies de tartarugas marinhas, é uma das mais associadas com as águas tropicais. Duas das principais subpopulações reconhecidas são a atlântica e a indo-pacífica.</p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+     
+    
+    <footer>
+        <p>&copy; 2024 Zoo Wiki. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

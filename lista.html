@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais - Zoo Wiki</title>
+    <link rel="stylesheet" href="sobrenos.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="data-horario"></div> <!-- Adicione este elemento para exibir a data e o horário -->
+        <script>
+            // Função para atualizar a data e o horário
+            function atualizarDataHorario() {
+                var agora = new Date();
+                var data = agora.toLocaleDateString();
+                var horas = agora.getHours();
+                var minutos = agora.getMinutes();
+                var segundos = agora.getSeconds();
+
+                horas = (horas < 10 ? "0" : "") + horas;
+                minutos = (minutos < 10 ? "0" : "") + minutos;
+                segundos = (segundos < 10 ? "0" : "") + segundos;
+
+                document.getElementById("data-horario").textContent = data + " " + horas + ":" + minutos + ":" + segundos;
+            }
+
+            atualizarDataHorario();
+
+            setInterval(atualizarDataHorario, 1000); // 1000 milissegundos = 1 segundo
+        </script>
+   
+    <nav id="menu">
+        <div class="logo">
+            <a href="index.html">
+            <img src="imagens/logozoo.webp" alt="logozoo">
+            </a>
+            <h2 class="titulo">Zoo Wiki</h2>
+            
+        </div>
+       
+        <ul>
+            <li><a href="index.html">Explorar</a>
+                <ul class="submenu">
+                    <li><a href="index.html">Pagina principal</a></li>
+                    <li><a href="sobrenos.html">Sobre nós</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Animais</a>
+                <ul class="submenu">
+                    <li><a href="anfibios.html">Anfibios</a></li>
+                    <li><a href="repteis.html">Repteis</a></li>
+                    <li><a href="mamiferos.html">Mamiferos</a></li>
+                    <li><a href="aves.html">Aves</a></li>
+                    <li><a href="peixes.html">Peixes</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Mais</a>
+                <ul class="submenu">
+                    <li><a href="lista.html">Lista de zoologicos</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contacto</a>
+                <ul class="submenu">
+                    <li><a href="contato.html">Contacte-nos</a></li>
+                    <li><a href="formulario.html">Enviar formulário</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+     </header>
+     
+
+     <div class="container">
+        <div class="image-container">
+          <img src="imagens/zoo_da_maia.png" alt="Imagem">
+        </div>
+        <div class="content-container">
+          <div> <a href="https://www.zoodamaia.pt/"class="name">Zoo da Maia</a></div>
+          <div class="text">
+            <p>O Jardim Zoológico da Maia foi criado em 1985 e pretende ser um centro de investigação, preservação e divulgação das espécies, sobretudo junto das escolas. Este espaço possui uma clínica própria e pessoal qualificado, albergando mais de 300 animais.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="image-container">
+          <img src="imagens/Jardim-zoologico.png" alt="Imagem">
+        </div>
+        <div class="content-container"> 
+          <div> <a href="https://www.zoo.pt/" class="name">Jardim-Zoológico de Lisboa</a></div>
+          <div class="text">
+            <p>O Jardim Zoológico e de Aclimação em Portugal, localiza-se em Sete Rios, em Lisboa, Portugal. Atualmente reúne um conjunto representativo de todo o planeta, com cerca de 2000 animais de 300 espécies diferentes.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container">
+        <div class="image-container">
+          <img src="imagens/Zoo santo Inacio.png" alt="Imagem">
+        </div>
+        <div class="content-container">
+          <div> <a href="https://zoosantoinacio.com/" class="name">Zoo Santo Inácio</a></div>
+          <div class="text">
+            <p>O Zoo Santo Inácio é o maior jardim zoológico do norte de Portugal, situado em Avintes, Vila Nova de Gaia. Inaugurado em 2000, alberga atualmente mais 800 animais, de 270 espécies.</p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+    
+    <footer>
+        <p>&copy; 2024 Zoo Wiki. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

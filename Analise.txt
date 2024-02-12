@@ -1,0 +1,35 @@
+Análise
+
+Antes de iniciar o desenho e implementação do website, responda por escrito
+às seguintes questões de análise:
+
+• Quem é o público-alvo? Que características definem o público-alvo?
+    - ;
+
+• O que é que o público-alvo procura no website? Que tarefas tem que realizar
+no website? Quais as suas expectativas?
+
+• Que objetivos quer o vosso grupo atingir ao implementar o website? São
+objetivos quantitativos ou qualitativos?
+
+
+
+• Que atitude se pretende conferir ao website?
+
+
+
+• Que sensações se pretende incutir no utilizador?
+
+
+
+• Quais são as cores dominantes do website?
+
+
+
+• Que funcionalidades e conteúdos gostaria de ver implementadas no site?
+
+
+
+• Como podemos medir o sucesso do website? Como sabemos se os objetivos
+foram atingidos? É possível medir objetivamente (quantitativamente) o
+sucesso do website? Como?
